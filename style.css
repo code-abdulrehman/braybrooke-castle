@@ -1,0 +1,135 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: black;
+  font-family: Arial, sans-serif;
+}
+
+#rotate-prompt {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+#container {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+#videoElement {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+#overlayImage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* object-fit: contain; */
+  opacity: 0.5;
+  z-index: 2;
+  pointer-events: none;
+}
+
+#captionBox {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  background-color: rgba(255,255,255,0.8);
+  padding: 10px;
+  max-width: 40%;
+  border-radius: 8px;
+  display: none;
+  z-index: 3;
+}
+
+#captionBox h2 {
+  margin-top: 0;
+}
+
+.slider-container {
+  position: absolute;
+  top: 10%;
+  bottom: 10%;
+  width: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 4;
+}
+
+.slider-label {
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  margin-top: 8px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+#opacitySliderContainer {
+  left: 0;
+}
+
+#captionSliderContainer {
+  right: 0;
+}
+
+input[type="range"] {
+  writing-mode: bt-lr;
+  -webkit-appearance: slider-vertical;
+  appearance: slider-vertical;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  transform: rotate(180deg);
+}
+
+.nav-buttons {
+  position: absolute;
+  top: 10px;
+  /* left: 10px; */
+  z-index: 5;
+  width: 100%;
+  padding: 0 10px;
+}
+
+.nav-buttons button {
+  margin-right: 10px;
+  padding: 8px 12px;
+  font-size: 14px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.nav-buttons button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.nav-buttons .close-btn {
+    padding: 10px 12px;
+}
+
+#downloadBtn {
+    float: right;
+    margin-right: 20px;
+}

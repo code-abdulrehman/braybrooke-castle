@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta charset="UTF-8">
+  <title>Heritage Trail Viewer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="rotate-prompt">Please rotate your device to landscape</div>
+
+  <div id="container">
+    <video id="videoElement" autoplay playsinline></video>
+    <img id="overlayImage" src="overlay.webp" alt="Historic View">
+    
+    <div id="captionBox">
+      <h2>Braybrooke Castle</h2>
+      <p>This overlay shows the former Braybrooke Castle in its original glory. Compare its former layout and towers to the current site as seen through your camera.</p>
+    </div>
+
+    <div class="slider-container" id="opacitySliderContainer">
+      <input type="range" min="0" max="100" value="50" id="opacitySlider" title="Adjust overlay opacity">
+      <span class="slider-label">Opacity</span>
+    </div>
+
+    <div class="slider-container" id="captionSliderContainer">
+      <input type="range" min="0" max="100" value="20" id="captionSlider" title="Reveal text caption">
+      <span class="slider-label">Info</span>
+    </div>
+
+    <div class="nav-buttons">
+      <button class="close-btn">✖ Close</button>
+      <button class="back-btn">↩ Return to Map</button>
+      <button id="downloadBtn">📷 Download View</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

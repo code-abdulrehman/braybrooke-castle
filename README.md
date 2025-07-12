@@ -1,5 +1,6 @@
 Heritage Trail Viewer - Installation and Customization Guide
 
+<img src="./qr.png" />
 This is a mobile-friendly web application that overlays historic images on a live camera feed.
 
 📱 Requirements:
